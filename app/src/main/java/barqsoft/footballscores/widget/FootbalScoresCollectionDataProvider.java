@@ -114,16 +114,6 @@ public class FootbalScoresCollectionDataProvider implements RemoteViewsService.R
         mView.setTextViewText(R.id.away_side_score, mTeams.get(i).getAwayScore());
         mView.setTextViewText(R.id.match_time, mTeams.get(i).getGameDetail());
 
-        if (!mTeams.get(i).getAwaySide().equals("")) {
-            if (!mTeams.get(i).getHomeScore().equals("")) {
-                mView.setContentDescription(R.id.home_side, mContext.getResources().getString(R.string.final_score) + " " + mTeams.get(i).getHomeSide());
-                mView.setContentDescription(R.id.match_time, mContext.getResources().getString(R.string.on) + " " + mTeams.get(i).getGameDetail());
-            } else {
-                mView.setContentDescription(R.id.home_side, mTeams.get(i).getHomeSide() + " " + mContext.getResources().getString(R.string.verses));
-                mView.setContentDescription(R.id.away_side, mTeams.get(i).getAwaySide() + " " + mContext.getResources().getString(R.string.on));
-            }
-        }
-
         final Intent fillInIntent = new Intent();
         mView.setOnClickFillInIntent(R.id.widget_list_item, fillInIntent);
 

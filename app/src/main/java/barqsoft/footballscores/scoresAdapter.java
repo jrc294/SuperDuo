@@ -47,9 +47,7 @@ public class scoresAdapter extends CursorAdapter
         final ViewHolder mHolder = (ViewHolder) view.getTag();
         mHolder.home_name.setText(cursor.getString(COL_HOME));
         mHolder.away_name.setText(cursor.getString(COL_AWAY));
-        mHolder.home_name.setContentDescription(mHolder.home_name.getText() + " " + context.getResources().getString(R.string.verses) + " " + mHolder.away_name.getText());
         mHolder.date.setText(cursor.getString(COL_MATCHTIME));
-        mHolder.date.setContentDescription(" " + context.getResources().getString(R.string.at) + " " + mHolder.date.getText());
         mHolder.score.setText(Utilies.getScores(cursor.getInt(COL_HOME_GOALS),cursor.getInt(COL_AWAY_GOALS)));
         mHolder.match_id = cursor.getDouble(COL_ID);
         mHolder.home_crest.setImageResource(Utilies.getTeamCrestByTeamName(

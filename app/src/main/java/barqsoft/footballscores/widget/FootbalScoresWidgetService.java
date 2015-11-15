@@ -76,15 +76,10 @@ public class FootbalScoresWidgetService extends IntentService {
                 gameDetail = fmt.format(today);
                 if (!homeGoals.equals("-1")) {
                     gameDetail += this.getResources().getString(R.string.full_time);
-                    views.setContentDescription(R.id.home_side, getResources().getString(R.string.final_score) + " " + hometeam);
-                    views.setContentDescription(R.id.match_time, getResources().getString(R.string.on) + " " + gameDetail);
                     views.setTextViewText(R.id.home_side_score, homeGoals);
                     views.setTextViewText(R.id.away_side_score, awayGoals);
                 } else {
                     gameDetail += " " + this.getResources().getString(R.string.at) + " " + matchTime;
-                    views.setContentDescription(R.id.home_side, hometeam + " " +
-                        getResources().getString(R.string.verses));
-                    views.setContentDescription(R.id.away_side, awayTeam + " " + getResources().getString(R.string.on));
                 }
 
                 views.setTextViewText(R.id.home_side, hometeam);

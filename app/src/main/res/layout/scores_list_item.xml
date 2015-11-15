@@ -70,7 +70,6 @@
                 android:gravity="center"
                 android:text="@string/test_text"
                 android:textSize="@dimen/TeamNames"
-                android:importantForAccessibility="no"
                 android:id="@+id/away_name"/>
         </LinearLayout>
     </LinearLayout>

@@ -39,8 +39,8 @@ public class myFetchService extends IntentService
     @Override
     protected void onHandleIntent(Intent intent)
     {
-        getData("n23");
-        getData("p23");
+        getData("n7");
+        getData("p7");
 
         Intent i = new Intent();
         i.setAction("android.appwidget.action.APPWIDGET_UPDATE");
@@ -200,7 +200,13 @@ public class myFetchService extends IntentService
                         League.equals(SERIE_A)             ||
                         League.equals(BUNDESLIGA1)         ||
                         League.equals(BUNDESLIGA2)         ||
-                        League.equals(PRIMERA_DIVISION)     )
+                        League.equals(PRIMERA_DIVISION)    ||
+                        League.equals(LIGUE1)              ||
+                        League.equals(LIGUE2)              ||
+                        League.equals(SEGUNDA_DIVISION)    ||
+                        League.equals(PRIMERA_LIGA)        ||
+                        League.equals(Bundesliga3)         ||
+                        League.equals(EREDIVISIE))
                 {
                     match_id = match_data.getJSONObject(LINKS).getJSONObject(SELF).
                             getString("href");
